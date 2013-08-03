@@ -1,0 +1,12 @@
+<h> Welcome to our rooms list ! Click on any room for more details </h>
+<% if @rooms.blank? %>
+<p>There are not any rooms currently in the system.</p>
+<% else %>
+<ul>
+	<% (@rooms).each do |room| %>
+	<li>
+		<%= link_to room.title, {:action => 'show', :id => room.id} -%>
+	</li>
+	<% end %>
+<% end %>
+</ul>
