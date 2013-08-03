@@ -3,8 +3,7 @@ Rooms::Application.routes.draw do
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
-  get 'rooms/show/:id' => "rooms#show"
-  get 'rooms/index' => "rooms#index"
+  resources :rooms
   root 'rooms#index'
 
   # Example of regular route:
